@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import Banner from "../components/Banner";
 import Stats from "../components/Stats";
 import TopDoctors from "../components/TopDoctors";
-// এই লাইনটি ঠিক করা হয়েছে (../ দেওয়া হয়েছে)
-import Doctors from "../Doctors";
 
 const Home = () => {
   useEffect(() => {
@@ -15,9 +13,7 @@ const Home = () => {
       <Banner />
       <Stats />
       <TopDoctors />
-
-      {/* আমাদের নতুন ডাক্তার সেকশন */}
-      <Doctors />
+      {/* Doctors কম্পোনেন্ট এখান থেকে সরিয়ে দেওয়া হলো, যাতে ক্লায়েন্ট ফর্ম না দেখে */}
     </div>
   );
 };

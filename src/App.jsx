@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Doctors from "./Doctors"; // ১. এখানে ইম্পোর্ট করুন (খেয়াল রাখবেন ফাইল পাথ যেন ঠিক থাকে)
 import MainLayout from "./layouts/MainLayout";
-import About from "./pages/About"; // ১. About পেজ ইম্পোর্ট করা হলো
+import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import Bookings from "./pages/Bookings";
 import DoctorDetails from "./pages/DoctorDetails";
@@ -30,8 +31,13 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
-        path: "/about", // ২. About পেজের রাস্তা (Route) যোগ করা হলো
+        path: "/about",
         element: <About />,
+      },
+      // ২. এই গোপন রাস্তাটি যোগ করুন
+      {
+        path: "/manage-doctors",
+        element: <Doctors />,
       },
     ],
   },
