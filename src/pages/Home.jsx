@@ -1,10 +1,11 @@
-import { useEffect } from "react"; // <--- ১. এটা ইম্পোর্ট করুন
+import { useEffect } from "react";
 import Banner from "../components/Banner";
 import Stats from "../components/Stats";
 import TopDoctors from "../components/TopDoctors";
+// এই লাইনটি ঠিক করা হয়েছে (../ দেওয়া হয়েছে)
+import Doctors from "../Doctors";
 
 const Home = () => {
-  // ২. এই useEffect টুকু যোগ করুন
   useEffect(() => {
     document.title = "MedicalApp | Home";
   }, []);
@@ -14,6 +15,9 @@ const Home = () => {
       <Banner />
       <Stats />
       <TopDoctors />
+
+      {/* আমাদের নতুন ডাক্তার সেকশন */}
+      <Doctors />
     </div>
   );
 };
